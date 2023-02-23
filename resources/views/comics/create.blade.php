@@ -1,3 +1,5 @@
+{{-- Pagina form --}}
+
 @extends('layouts.app')
 @section('content')
     <div class="container">
@@ -11,7 +13,7 @@
             <div>
                 {{-- Visualizza errori --}}
             </div>
-            <form action="{{route('comics.showNewComics')}}" method="POST">
+            <form action="{{route('comics.store')}}" method="POST">
                 @csrf
                 <div class="form-group mb-3">
                     <label class="control-label">slug</label>
@@ -39,6 +41,9 @@
                 </div>
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-success">save</button>
-                </div>
+                </div>     
             </form>
+        </div>
+    </div>
+
 @endsection

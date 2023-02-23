@@ -29,7 +29,10 @@ class ComicController extends Controller
     public function create()
     {
         {
-            return view('comics.create');
+            $productsmenu = config('comics.menu');
+            $productsicon = config('comics.icon');
+            $productsocial = config('comics.social');
+            return view('comics.create', compact('productsmenu','productsicon','productsocial'));
         }
     }
 
@@ -41,20 +44,20 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-        $form_data = $request->all();
+            $form_data = $request->all();
 
             $newComic = new Comic();
-            $newComic->slug = $comic['slug'];
-            $newComic->title = $comic['title'];
-            $newComic->description = $comic['description'];
-            $newComic->thumb = $comic['thumb'];
-            $newComic->price = $comic['price'];
-            $newComic->series = $comic['series'];
-            $newComic->sale_date = $comic['sale_date'];
-            $newComic->type = $comic['type'];
+            $newComic->slug = $form_data['slug'];
+            $newComic->title = $form_data['title'];
+            $newComic->description = $form_data['description'];
+            $newComic->thumb = $form_data['thumb'];
+            $newComic->price = $form_data['price'];
+            $newComic->series = $form_data['series'];
+            
+
             $newComic->save();
             
-            return redirect()->route('comics.show',['comic' =>$newComic->id]);
+            return redirect()->route('comics.show',['comic' => $newComic-> id]);
     }
 
     /**

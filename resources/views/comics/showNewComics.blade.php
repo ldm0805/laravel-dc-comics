@@ -1,3 +1,4 @@
+{{-- Pagina nuovo fumetto --}}
 @extends('layouts.app')
 @section('content')
 <div class="container">
