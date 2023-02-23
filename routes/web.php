@@ -18,16 +18,7 @@ use App\Http\Controllers\PagesController as PagesController;
 |
 */
 
-// //Route della pagina principale
-// Route::get('/', [ComicController::class, 'getAllCards'])->name('homepage');
-// //Route della seconda pagina con il comic in dettaglio
-// Route::get('/single-card/{slug}', [ComicController::class, 'show'])->name('single-card');
+Route::get('/', [ComicController::class, 'index'])->name('homepage');
 
-// //Funzione per cambiare il formato data
-// function changeDate($saleDate)
-// {
-//     $date = $saleDate['sale_date'];
-//     return \Carbon\Carbon::createFromFormat('Y-m-d', $date)->format('M d Y');
-// }
-
-Route::get('/', [PagesController::class, 'index'])->name('homepage');
+//Recupera la route in automatico
+Route::resource('comics', ComicController::class);

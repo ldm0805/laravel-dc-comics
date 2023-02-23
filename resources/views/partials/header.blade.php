@@ -15,11 +15,11 @@
         <div>
             <nav class="nav_cont">
                 <ul>
-                    @foreach($productsmenu as $menuitem)
                     <li>
-                        <a class="{{Route::currentRouteName() == 'homepage' ? 'active' : ''}}" href="{{$menuitem['url']}}">{{$menuitem['label']}}</a>
+                        <a class="{{Route::currentRouteName() == 'homepage' ? 'active' : ''}}" href="{{route('homepage')}}">Home</a>
+                        <a class="{{Route::currentRouteName() == 'comics.index' ? 'active' : ''}}" href="{{route('comics.index')}}">Prodotti</a>
+
                     </li>
-                    @endforeach
                 </ul>
             </nav>
         </div>

@@ -16,7 +16,6 @@
     
     {{-- "Segnaposto" nella pagina per il contenuto  --}}
     @yield('content')
-
     {{-- Includo il footer --}}
     @include('partials.footer')
 </body>
