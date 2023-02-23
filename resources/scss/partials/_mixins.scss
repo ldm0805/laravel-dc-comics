@@ -1,0 +1,38 @@
+@mixin center {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+@mixin justify_content_between {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+@mixin upbold {
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+@mixin space_around {
+    display: flex;
+    justify-content: space-around;
+}
+
+@mixin whitebold {
+    color: white;
+    font-weight: bold;
+}
+
+@mixin button {
+    background-color: #303030;
+    border: 3px solid rgb(35, 56, 219);
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12px;
+}

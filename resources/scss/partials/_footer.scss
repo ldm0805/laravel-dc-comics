@@ -1,0 +1,151 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+.footer_cont {
+    padding: 2em 5em;
+    background-color: #0282f9;
+    width: 100%;
+
+    .contet_title {
+        color: white;
+        @include upbold;
+    }
+
+    .link-flex {
+        display: flex;
+        align-items: center;
+    }
+
+    ul {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .description {
+            padding-left: 1em;
+        }
+
+        img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+        }
+
+        span {
+            color: white;
+            font-size: 10px;
+        }
+    }
+
+}
+
+footer {
+
+
+    .cont_list {
+        background-image: url('/resources/images/footer-bg.jpg');
+        background-size: cover;
+        display: flex;
+        justify-content: space-around;
+        color: $white;
+
+        .footer-links {
+            padding: 2em 0em;
+        }
+
+        .dc_bg {
+            background-image: url('/resources/images/dc-logo-bg.png');
+            background-size: cover;
+            background-position: right center;
+            width: 600px;
+        }
+
+
+        div {
+            padding: 0em 2em;
+        }
+
+        li {
+            color: $white;
+            list-style: $listnone;
+        }
+
+        li a {
+            color: gray;
+
+            &:hover {
+                color: white;
+            }
+        }
+
+        .copyright {
+            padding-left: 2em;
+            font-size: 12px;
+
+            a {
+                text-decoration: none;
+
+            }
+        }
+    }
+
+    .button {
+        padding: 4em;
+        background-color: #303030;
+        @include justify_content_between;
+
+    }
+
+    .footer-button {
+        @include button;
+
+        &:hover {
+            font-size: 15px;
+            cursor: pointer;
+            filter: brightness(1.2);
+        }
+
+    }
+
+    //Liste icone social
+
+    .social {
+        height: 150px;
+        background-color: #303030;
+        align-items: center;
+        display: flex;
+        justify-content: space-around;
+        @include upbold;
+
+        .icon {
+            display: flex;
+            align-items: center;
+            @include upbold;
+
+            ul {
+                display: flex;
+                gap: .5em;
+
+            }
+
+            li {
+                display: flex;
+                color: $white;
+                list-style: $listnone;
+
+                &:hover {
+                    filter: brightness(100);
+                }
+            }
+
+            .follow {
+                @include upbold;
+                color: #0282f9;
+                padding-right: .5em;
+            }
+
+        }
+    }
+
+}

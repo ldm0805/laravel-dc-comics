@@ -1,0 +1,146 @@
+@import '~resources/scss/partials/_mixins.scss';
+@import '~resources/scss/partials/_variables.scss';
+
+div.single-card {
+    padding-top: 3em;
+    width: 90%;
+    margin: 0 auto;
+    position: relative;
+
+    h4 {
+        text-transform: uppercase;
+    }
+
+    div.position {
+        width: 80%;
+        margin: 0 auto;
+
+        .view {
+            border: 3px solid white;
+            position: absolute;
+            top: -350px;
+            left: 0;
+            background-color: #00a9d9;
+
+            div {
+                text-align: center;
+                @include upbold;
+                color: white;
+            }
+
+            .comic {
+                position: absolute;
+                top: 0;
+                left: 0;
+                background-color: #00a9d9;
+            }
+
+        }
+
+    }
+
+    .advertisement {
+        text-align: end;
+        @include upbold;
+        color: rgb(66, 66, 66);
+    }
+
+}
+
+.talentspecscont {
+    border-top: 1px solid gray;
+    background-color: #f6f6f6;
+    font-weight: bold;
+
+    a {
+        text-decoration: none;
+    }
+
+    .talentspecs {
+        padding-top: 3em;
+        width: 90%;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+
+        h2 {
+            padding-bottom: .8em;
+        }
+
+
+        .h2,
+        p {
+            color: rgb(106, 106, 106);
+            padding-bottom: .5em;
+            border-bottom: 1px solid rgb(66, 66, 66);
+        }
+    }
+}
+
+.green-cont {
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+
+    .avaible {
+        display: flex;
+        justify-content: space-between;
+        border-right: 1px solid rgb(66, 66, 66);
+
+        .upbold {
+            color: rgb(224, 224, 224);
+            @include upbold;
+        }
+    }
+
+    .avaible,
+    .check-avaible {
+        padding: .8em;
+        background-color: #55ba59;
+        border-bottom: 1px solid rgb(66, 66, 66);
+        // @include whitebold;
+    }
+}
+
+.image-cont {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+
+
+    .icon {
+        height: 37px;
+        width: 37px;
+        background-image: url('/resources/images/cta-icons.png');
+    }
+
+    .flex-image {
+        display: flex;
+        justify-content: space-between;
+        padding: 1em 0.5em 1.5em 0.5em;
+        border: 1px solid rgb(195, 195, 195);
+
+
+        h6 {
+            color: rgb(195, 195, 195);
+            text-transform: uppercase;
+        }
+
+        .phone-cont {
+            background-position: 0px 0px;
+        }
+
+        .tshirt-cont {
+            background-position: -37px 0px;
+        }
+
+        .position-cont {
+            background-position: -222px 0px;
+        }
+
+        .card-cont {
+            background-position: 38px -74px;
+        }
+    }
+}
