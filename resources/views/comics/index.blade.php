@@ -5,10 +5,11 @@
         <div class="album">
             @foreach($products as $albumcover)
                     @include('/partials/detail_card')
+                    
             @endforeach
         </div>
         <div class="text-center">
-            <button class="button_load">Load more</button>
+            <a href="{{route('comics.create')}}" class="btn btn-primary">aggiungi comic</a>
         </div>
     </section>
 </div>

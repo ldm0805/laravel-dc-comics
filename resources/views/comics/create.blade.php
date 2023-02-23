@@ -5,41 +5,37 @@
             <div class="col-12 py-3">
                 <div class="d-flex justify-content-between-align-items-center">
                     <h1>inserisci pasta nuova</h1>
-                    <a href="{{route('pastas.index')}}" class="btn btn-primary">torna indietro</a>
+                    <a href="{{route('comics.index')}}" class="btn btn-primary">Homepage</a>
                 </div>
             </div>
             <div>
                 {{-- Visualizza errori --}}
             </div>
-            <form action="{{route('pastas.show')}}" method="POST">
+            <form action="{{route('comics.showNewComics')}}" method="POST">
                 @csrf
                 <div class="form-group mb-3">
-                    <label class="control-label">titolo</label>
-                    <input type="text" name="titolo" class="form-control" placeholder="inserisci titolo">
+                    <label class="control-label">slug</label>
+                    <input type="text" name="slug" class="form-control" placeholder="inserisci slug">
                 </div>
                 <div class="form-group mb-3">
-                    <label class="control-label">titolo</label>
-                    <select class="form-control" name="tipo">
-                        <option value="lunga">lunga</option>
-                        <option value="corta">corta</option>
-                        <option value="cortissima">cortissima</option>
-                    </select>
+                    <label class="control-label">title</label>
+                    <input type="text" name="title" class="form-control" placeholder="inserisci title">
                 </div>
                 <div class="form-group mb-3">
-                    <label class="control-label">peso</label>
-                    <input type="text" name="peso" class="form-control" placeholder="inserisci peso">
+                    <label class="control-label">description</label>
+                    <textarea class="form-control" name="description" cols="30" rows="10" placeholder="inserisci la description"></textarea>
                 </div>
                 <div class="form-group mb-3">
-                    <label class="control-label">cottura</label>
-                    <input type="text" name="cottura" class="form-control" placeholder="inserisci cottura">
+                    <label class="control-label">thumb</label>
+                    <input class="form-control" name="thumb" placeholder="inserisci la thumb">
                 </div>
                 <div class="form-group mb-3">
-                    <label class="control-label">descrizione</label>
-                    <textarea class="form-control" name="descrizione" cols="30" rows="10" placeholder="inserisci la descrizione"></textarea>
+                    <label class="control-label">price</label>
+                    <input class="form-control" name="price" placeholder="inserisci la price">
                 </div>
                 <div class="form-group mb-3">
-                    <label class="control-label">immagine</label>
-                    <textarea class="form-control" name="image" cols="30" rows="10" placeholder="inserisci la immagine"></textarea>
+                    <label class="control-label">series</label>
+                    <input class="form-control" name="series" placeholder="inserisci la series">
                 </div>
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-success">save</button>
