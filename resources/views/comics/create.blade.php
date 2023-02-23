@@ -16,10 +16,6 @@
             <form action="{{route('comics.store')}}" method="POST">
                 @csrf
                 <div class="form-group mb-3">
-                    <label class="control-label">slug</label>
-                    <input type="text" name="slug" class="form-control" placeholder="inserisci slug">
-                </div>
-                <div class="form-group mb-3">
                     <label class="control-label">title</label>
                     <input type="text" name="title" class="form-control" placeholder="inserisci title">
                 </div>
@@ -38,6 +34,14 @@
                 <div class="form-group mb-3">
                     <label class="control-label">series</label>
                     <input class="form-control" name="series" placeholder="inserisci la series">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="control-label">type</label>
+                    <input class="form-control" name="type" placeholder="inserisci la type">
+                </div>
+                <div class="form-group mb-3">
+                    <label class="control-label">sale_date</label>
+                    <input class="form-control" name="sale_date" placeholder="inserisci la sale_date">
                 </div>
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-success">save</button>

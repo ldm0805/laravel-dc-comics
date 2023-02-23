@@ -15,7 +15,7 @@ class ComicsSeeder extends Seeder
      */
     public function run()
     {
-        $comics = config('comics.fumetti');
+        $comics = config('comics');
 
         foreach ($comics as $comic) {
             $newComic = new Comic();
