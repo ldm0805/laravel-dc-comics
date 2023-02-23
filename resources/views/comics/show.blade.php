@@ -42,8 +42,8 @@
     <div class="talentspecs">
         <div class="talent col-6">
             <h2>Talent</h2>
-            <p>Art by: <a href="#"> {{$single['artists']}} </a></p>
-            <p>Written by: <a href="#"> {{$single['writers']}} </a></p>
+            <p>Art by: <a href="#"> Coming soon </a></p>
+            <p>Written by: <a href="#"> Coming soon </a></p>
         </div>
         <div class="specs col-4">
             <h2>Specs</h2>

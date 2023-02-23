@@ -13,7 +13,15 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::table('comics', function (Blueprint $table) {
+        Schema::create('comics', function (Blueprint $table) {
+            $table->id();
+            $table->string('title', 50);
+            $table->longText('description');
+            $table->string('thumb');
+            $table->string('price');
+            $table->string('series');
+            $table->string('type');
+            $table->string('sale_date');
             $table->timestamps();
         });
     }

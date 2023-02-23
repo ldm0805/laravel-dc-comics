@@ -18,7 +18,6 @@
                     <li>
                         <a class="{{Route::currentRouteName() == 'homepage' ? 'active' : ''}}" href="{{route('homepage')}}">Home</a>
                         <a class="{{Route::currentRouteName() == 'comics.index' ? 'active' : ''}}" href="{{route('comics.index')}}">Prodotti</a>
-
                     </li>
                 </ul>
             </nav>
