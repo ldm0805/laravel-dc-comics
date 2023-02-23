@@ -11,7 +11,7 @@
         </div>
     </div>
     {{-- Descrizione del fumetto con prezzo e disponibilità --}}
-    <div class="d-flex">
+    <div class="d-flex justify-content-between">
         <div class="title-desc">
             <div>
                 <h4 class="upbold">{{$single['title']}}</h4>
@@ -42,8 +42,8 @@
     <div class="talentspecs">
         <div class="talent col-6">
             <h2>Talent</h2>
-            <p>Art by: <a href="#"> Coming soon </a></p>
-            <p>Written by: <a href="#"> Coming soon </a></p>
+            <p>Art by: <a href="#"> Non disponibile</a></p>
+            <p>Written by: <a href="#"> Non disponibile</a></p>
         </div>
         <div class="specs col-4">
             <h2>Specs</h2>

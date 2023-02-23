@@ -8,8 +8,10 @@
                     
             @endforeach
         </div>
-        <div class="text-center">
-            <a href="{{route('comics.create')}}" class="btn btn-primary">aggiungi comic</a>
+        <div class="col-but">
+            <a href="{{route('comics.create')}}" >
+                <button class="footer-button">Aggiungi Comic!</button>
+            </a>
         </div>
     </section>
 </div>

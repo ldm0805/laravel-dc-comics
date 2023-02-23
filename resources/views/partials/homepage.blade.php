@@ -2,5 +2,5 @@
 
 @extends('layouts.app')
 @section('content')
-<h1>Benvenuto nella nuova view</h1>
+    <h1>Benvenuto nuovo utente</h1>
 @endsection
