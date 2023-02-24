@@ -7,7 +7,9 @@
             <div class="col-12 py-3">
                 <div class="d-flex justify-content-between-align-items-center">
                     <h1>Un nuovo fumetto</h1>
-                    <a href="{{route('homepage')}}" class="btn btn-primary">Homepage</a>
+                    <a href="{{route('homepage')}}" >
+                        <button class="footer-button">Homepage</button>
+                    </a>
                 </div>
             </div>
             <div>
