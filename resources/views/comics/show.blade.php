@@ -49,6 +49,8 @@
             <h2>Specs</h2>
             <p>Series: <a href="#">{{$single['series']}}</a></p>
             <p>U.S. Price: {{$single['price']}}</p>
+            <p>On Sale Date: {{$single['sale_date']}}</p>
+
             {{-- <p>On Sale Date: {{ changeDate($single) }}</p> --}}
         </div>
     </div>
