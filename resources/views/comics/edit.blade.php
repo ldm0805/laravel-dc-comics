@@ -6,8 +6,8 @@
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-12 py-3">
-                <div class="d-flex justify-content-between-align-items-center">
-                    <h2>Modifica Comic</h2>
+                <div class="d-flex justify-content-center align-items-center">
+                    <h2>Modifica Comic: {{ $single->title}}</h2>
                 </div>
             </div>
             <div>

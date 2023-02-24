@@ -22,7 +22,10 @@
                         <a class="{{Route::currentRouteName() == 'comics.index' ? 'active' : ''}}" href="{{route('comics.index')}}">Prodotti</a>
                     </li>
                     <li>
-                        <a class="{{Route::currentRouteName() == 'comics.create' ? 'active' : ''}}" href="{{route('comics.create')}}">Crea fumetto</a>
+                        <a class="{{Route::currentRouteName() == 'comics.create' ? 'active' : ''}}" href="{{route('comics.create')}}">Crea comic</a>
+                        <li>
+                            <a class="{{Route::currentRouteName() == 'comics.edit' ? 'active' : ''}}">Modifica comic</a>
+                        </li>
                     </li>
                 </ul>
             </nav>
