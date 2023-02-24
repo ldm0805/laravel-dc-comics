@@ -18,14 +18,14 @@
                 @method('PUT') 
                 <div class="form-group mb-3">
                     <label class="control-label">Titolo</label>
-                    <input type="text" name="title" class="form-control" placeholder="Inserisci il titolo "  value="{{$single->title}}">
+                    <input type="text" name="title" class="form-control" placeholder="Inserisci il titolo "  value="{{old('title') ?? $single->title}}">
                     @error('title')
                     <div class="text-danger">{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Descrizione</label>
-                    <textarea class="form-control" name="description" cols="30" rows="10" placeholder="Inserisci la descrizione"></textarea>
+                    <textarea class="form-control" name="description" cols="30" rows="10" placeholder="Inserisci la descrizione">{{old('description') ?? $single->description}}</textarea>
                     @error('description')
                     <div class="text-danger">{{$message}}</div>
                     @enderror
