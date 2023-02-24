@@ -1,0 +1,46 @@
+.homepage-cont {
+    padding-top: 3em;
+    background-color: #303030;
+
+    .homepage {
+        display: flex;
+        justify-content: center;
+        padding-bottom: 2em;
+
+        h1 {
+            color: white;
+            @include upbold;
+        }
+
+    }
+
+    .col-but {
+        display: flex;
+        gap: 3em;
+        padding-bottom: 3em;
+        height: 100px;
+
+        a {
+            text-align: center;
+            width: 300px;
+        }
+
+        .button {
+            padding: 4em;
+            background-color: #303030;
+            @include justify_content_between;
+
+        }
+
+        .footer-button {
+            @include button;
+
+            &:hover {
+                font-size: 15px;
+                cursor: pointer;
+                filter: brightness(1.2);
+            }
+
+        }
+    }
+}

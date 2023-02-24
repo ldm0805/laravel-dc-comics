@@ -17,7 +17,12 @@
                 <ul>
                     <li>
                         <a class="{{Route::currentRouteName() == 'homepage' ? 'active' : ''}}" href="{{route('homepage')}}">Home</a>
+                    </li>
+                    <li>
                         <a class="{{Route::currentRouteName() == 'comics.index' ? 'active' : ''}}" href="{{route('comics.index')}}">Prodotti</a>
+                    </li>
+                    <li>
+                        <a class="{{Route::currentRouteName() == 'comics.create' ? 'active' : ''}}" href="{{route('comics.create')}}">Crea fumetto</a>
                     </li>
                 </ul>
             </nav>
