@@ -15,12 +15,12 @@
             <div>
                 {{-- Visualizza errori --}}
             </div>
-            <form action="{{route('comics.update'), $comic->id}}" method="POST">
+            <form action="{{route('comics.update', ['comic' => $single->id])}}" method="POST">
                 @csrf
                 @method('PUT') 
                 <div class="form-group mb-3">
                     <label class="control-label">Titolo</label>
-                    <input type="text" name="title" class="form-control" placeholder="Inserisci il titolo "  value="{{old('title') ?? $comic->title}}">
+                    <input type="text" name="title" class="form-control" placeholder="Inserisci il titolo "  value="{{old('title') ?? $single->title}}">
                     @error('title')
                     <div>{{$message}}</div>
                     @enderror
@@ -31,35 +31,35 @@
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Immagine</label>
-                    <input class="form-control" name="thumb" placeholder="Inserisci l'immagine" value="{{old('thumb') ?? $comic->thumb}}">
+                    <input class="form-control" name="thumb" placeholder="Inserisci l'immagine" value="{{old('thumb') ?? $single->thumb}}">
                      @error('thumb')
                         <div>{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Prezzo</label>
-                    <input class="form-control" name="price" placeholder="Inserisci il prezzo" value="{{old('price') ?? $comic->price}}">
+                    <input class="form-control" name="price" placeholder="Inserisci il prezzo" value="{{old('price') ?? $single->price}}">
                      @error('price')
                         <div>{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Serie</label>
-                    <input class="form-control" name="series" placeholder="Inserisci la Serie" value="{{old('series') ?? $comic->series}}">
+                    <input class="form-control" name="series" placeholder="Inserisci la Serie" value="{{old('series') ?? $single->series}}">
                      @error('series')
                         <div>{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Tipo</label>
-                    <input class="form-control" name="type" placeholder="Inserisci la Tipo" value="{{old('type') ?? $comic->type}}">
+                    <input class="form-control" name="type" placeholder="Inserisci la Tipo" value="{{old('type') ?? $single->type}}">
                      @error('type')
                         <div>{{$message}}</div>
                     @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Data di uscita</label>
-                    <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la Data di uscita" value="{{old('sale_date') ?? $comic->sale_date}}">
+                    <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la Data di uscita" value="{{old('sale_date') ?? $single->sale_date}}">
                      @error('sale_date')
                         <div>{{$message}}</div>
                     @enderror

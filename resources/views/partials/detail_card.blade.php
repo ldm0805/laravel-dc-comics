@@ -10,7 +10,7 @@
             @method('DELETE')
             {{-- data-cicclo --}}
             <button type="submit" class="confirm-delete-button btn btn-sm btn-square btn-danger" data-title="{{$albumcover->title}}"> 
-                elimina
+                <i class="fa-solid fa-trash"></i>
             </button>
             </form>
     </div>
@@ -21,4 +21,5 @@
             <h6>{{$albumcover['title']}}</h6>
         </a>
 </div>
+@include ('comics.modal_delete_comic');
 

@@ -105,7 +105,11 @@ class ComicController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $newComic = Comic::findOrFail($id);
+
+        $form_data = $this->validation($request->all());
+        $newComic->update($form_data);
+        return redirect()->route('comics.show',['comic' => $newComic->id]);
     }
 
     /**
