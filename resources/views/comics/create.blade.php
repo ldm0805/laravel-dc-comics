@@ -12,38 +12,42 @@
                     </a>
                 </div>
             </div>
-            <div>
-                @if($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif 
-            </div>
             <form action="{{route('comics.store')}}" method="POST">
                 @csrf
                 <div class="form-group mb-3">
                     <label class="control-label">Titolo</label>
                     <input type="text" name="title" class="form-control" placeholder="Inserisci il titolo">
+                    @error('title')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Descrizione</label>
                     <textarea class="form-control" name="description" cols="30" rows="10" placeholder="Inserisci la descrizione"></textarea>
+                     @error('description')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Immagine</label>
                     <input class="form-control" name="thumb" placeholder="Inserisci l'immagine">
+                     @error('thumb')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Prezzo</label>
                     <input class="form-control" name="price" placeholder="Inserisci il prezzo">
+                     @error('price')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Serie</label>
                     <input class="form-control" name="series" placeholder="Inserisci la Serie">
+                     @error('series')
+                    <div class="text-danger">{{$message}}</div>
+                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Tipo</label>

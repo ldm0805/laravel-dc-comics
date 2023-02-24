@@ -13,16 +13,6 @@
                 </div>
             </div>
             <div>
-                @if($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach($errors->all() as $error)
-                        <li>{{$error}}</li>
-                        @endforeach
-                    </ul>
-                </div>
-                @endif 
-            </div>
             <form action="{{route('comics.update', ['comic' => $single->id])}}" method="POST">
                 @csrf
                 @method('PUT') 
@@ -61,16 +51,10 @@
                 <div class="form-group mb-3">
                     <label class="control-label">Tipo</label>
                     <input class="form-control" name="type" placeholder="Inserisci la Tipo" value="{{old('type') ?? $single->type}}">
-                     @error('type')
-                        <div class="text-danger">{{$message}}</div>
-                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Data di uscita</label>
                     <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la Data di uscita" value="{{old('sale_date') ?? $single->sale_date}}">
-                     @error('sale_date')
-                        <div class="text-danger">{{$message}}</div>
-                    @enderror
                 </div>
                 <div class="form-group mb-3">
                     <button type="submit" class="btn btn-success">Save</button>
@@ -78,5 +62,7 @@
             </form>
         </div>
     </div>
+</div>
+
 
 @endsection
