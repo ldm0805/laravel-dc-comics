@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Validator;
 use App\Models\Comic;
 
 class ComicController extends Controller
@@ -44,15 +45,10 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-            $form_data = $request->all();
+            // $form_data = $request->all();
+            $form_data = $this->validation($request->all());
             $newComic = new Comic();
-            // $newComic->title = $form_data['title'];
-            // $newComic->description = $form_data['description'];
-            // $newComic->thumb = $form_data['thumb'];
-            // $newComic->price = $form_data['price'];
-            // $newComic->series = $form_data['series'];
-            // $newComic->series = $form_data['type'];
-            // $newComic->series = $form_data['sale_date'];
+
             $newComic->fill($form_data);
 
             $newComic->save();
@@ -87,8 +83,17 @@ class ComicController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit($id)
-    {
-        //
+       {
+        $comic = Comic::find($id);
+        if($comic){
+            $single=[
+                'single'=> $comic
+            ];
+        }
+        $productsmenu = config('comics.menu');
+        $productsicon = config('comics.icon');
+        $productsocial = config('comics.social');
+        return view('comics.edit',$single, compact('productsmenu','productsicon','productsocial'));
     }
 
     /**
@@ -111,6 +116,37 @@ class ComicController extends Controller
      */
     public function destroy($id)
     {
-        //
+        $comic = Comic::findOrFail($id);
+        $comic->delete();
+
+        return redirect()->route('comics.index');
+    }
+    private function validation($data){
+        $validator = Validator::make($data,[
+            'title' => 'required|max:50',
+            'description' => 'required',
+            'thumb' => 'required',
+            'price' => 'required',
+            'series' => 'required',
+            'type' => 'required',
+            'sale_date' => 'required'
+
+        ],
+        [
+            'title.required' => 'Il title è obbligatorio',
+            'title.max' => 'il tiolo non può superare :max caratteri',
+            'description.required' => 'Il description è obbligatorio',
+            'description.max' => 'il description non può superare :max caratteri',
+            'price.required' => 'la price è obbligatorio',
+            'price.max' => 'la price non può superare :max caratteri',
+            'series.required' => 'Il series è obbligatorio',
+            'series.max' => 'il series non può superare :max caratteri',
+            'type.required' => 'Il type è obbligatorio',
+            'type.max' => 'il type non può superare :max caratteri',
+            'sale_date.required' => 'Il sale_date è obbligatorio',
+            'sale_date.max' => 'il sale_date non può superare :max caratteri',
+
+        ])->validate();
+        return $validator;
     }
 }
