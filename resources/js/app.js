@@ -8,7 +8,7 @@ import.meta.glob([
 const deleteButtons = document.querySelectorAll('.confirm-delete-button[type="submit"]');
 
 deleteButtons.forEach((button) => {
-    button.addEventListender('click', function (event) {
+    button.addEventListener('click', function (event) {
         event.preventDefault(); //evitiamo che venga cancellato subito il record dal database
         //recupero il nome della pasta dal dataatribbute titolo
         const comicTitle = button.getAttribute('data-title');
@@ -20,10 +20,10 @@ deleteButtons.forEach((button) => {
         bootstrapModal.show();
 
         //mostrare titolo pastanel segnaposto
-        const modalContent = modal.querySelector('#modal-item-title');
+        const modalContent = modal.querySelector('.modal-item-title');
         modalContent.textContent = comicTitle;
         //recupero il pulsante di cancellazione del record
-        const deleteButton = modal.querySelector('#confirm-delete');
+        const deleteButton = modal.querySelector('.confirm-delete');
         //metto in ascolto il pulsante per intercettare il click
         deleteButton.addEventListener('click', () => {
             button.parentElement.submit();

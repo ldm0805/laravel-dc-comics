@@ -14,4 +14,5 @@
         </div>
     </section>
 </div>
+@include ('comics.modal_delete_comic');
 @endsection
