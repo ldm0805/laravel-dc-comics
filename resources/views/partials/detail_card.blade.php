@@ -23,7 +23,7 @@
             </div>
             @else 
             <div class="album-image">
-            <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="">
+                <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="">
             </div>
             @endif
             <h6>{{$albumcover['title']}}</h6>
