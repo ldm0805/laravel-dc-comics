@@ -9,12 +9,12 @@
         </div>
         <div class="modal-body">
           <!-- span segnaposto -->
-         Sei sicuro di voler cancellare l'elemento selezionato? <span id="modal-item-title"></span> 
+         Sei sicuro di voler cancellare l'elemento selezionato? <span class="modal-item-title"></span> 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>
-          <button type="button" class="btn btn-primary" id="confirm-delete">Cancella</button>
+          <button type="button" class="btn btn-primary" class="confirm-delete">Cancella</button>
         </div>
       </div>
     </div>
-  </div>
+</div>

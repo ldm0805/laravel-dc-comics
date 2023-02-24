@@ -21,5 +21,8 @@
             <h6>{{$albumcover['title']}}</h6>
         </a>
 </div>
-@include ('comics.modal_delete_comic');
+@include ('.comics.modal_delete_comic');
+
+
+
 

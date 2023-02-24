@@ -45,7 +45,6 @@ class ComicController extends Controller
      */
     public function store(Request $request)
     {
-            // $form_data = $request->all();
             $form_data = $this->validation($request->all());
             $newComic = new Comic();
 
@@ -132,23 +131,15 @@ class ComicController extends Controller
             'thumb' => 'required',
             'price' => 'required',
             'series' => 'required',
-            'type' => 'required',
-            'sale_date' => 'required'
 
         ],
         [
-            'title.required' => 'Il title è obbligatorio',
-            'title.max' => 'il tiolo non può superare :max caratteri',
-            'description.required' => 'Il description è obbligatorio',
-            'description.max' => 'il description non può superare :max caratteri',
-            'price.required' => 'la price è obbligatorio',
-            'price.max' => 'la price non può superare :max caratteri',
-            'series.required' => 'Il series è obbligatorio',
-            'series.max' => 'il series non può superare :max caratteri',
-            'type.required' => 'Il type è obbligatorio',
-            'type.max' => 'il type non può superare :max caratteri',
-            'sale_date.required' => 'Il sale_date è obbligatorio',
-            'sale_date.max' => 'il sale_date non può superare :max caratteri',
+            'title.required' => 'Il titolo è obbligatorio.',
+            'title.max' => 'Il titolo non può superare :max caratteri.',
+            'description.required' => 'Il descrizione è obbligatoria.',
+            'thumb.required' => 'Il link dell\'immagine è obbligatorio.',
+            'price.required' => 'Il prezzo è obbligatorio.',
+            'series.required' => 'La serie è obbligatoria.',
 
         ])->validate();
         return $validator;

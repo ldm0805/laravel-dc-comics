@@ -5,7 +5,6 @@
         <div class="album">
             @foreach($products as $albumcover)
                     @include('/partials/detail_card')
-                    
             @endforeach
         </div>
         <div class="col-but">
