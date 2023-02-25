@@ -49,11 +49,11 @@
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Tipo</label>
-                    <input class="form-control" name="type" placeholder="Inserisci la Tipo">
+                    <input class="form-control" name="type" placeholder="Inserisci la tipologia">
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Data di uscita</label>
-                    <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la Data di uscita">
+                    <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la data di uscita">
                 </div>
                 <div class="form-group mb-3">
                     <div class="col-but">

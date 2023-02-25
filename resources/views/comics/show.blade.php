@@ -1,5 +1,8 @@
 {{-- Pagina 2 --}}
 @extends('layouts.app')
+
+@inject('utils', 'App\Utils\Utils')
+
 @section('content')
 {{-- Immagine di copertina del fumetto sul Jumbo --}}
 <div class="single-card">
@@ -49,9 +52,8 @@
             <h2>Specs</h2>
             <p>Series: <a href="#">{{$single['series']}}</a></p>
             <p>U.S. Price: {{$single['price']}}</p>
-            <p>On Sale Date: {{$single['sale_date']}}</p>
-
-            {{-- <p>On Sale Date: {{ changeDate($single) }}</p> --}}
+            {{-- <p>On Sale Date: {{ $utils->changeDate($single['sale_date']) }}</p>  --}}
+            {{dd($single['sale_date']);}}
         </div>
     </div>
 </div>
