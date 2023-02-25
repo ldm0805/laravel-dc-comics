@@ -131,6 +131,8 @@ class ComicController extends Controller
             'thumb' => 'required',
             'price' => 'required',
             'series' => 'required',
+            'sale_date' => 'required',
+
 
         ],
         [
@@ -140,6 +142,8 @@ class ComicController extends Controller
             'thumb.required' => 'Il link dell\'immagine è obbligatorio.',
             'price.required' => 'Il prezzo è obbligatorio.',
             'series.required' => 'La serie è obbligatoria.',
+            'sale_date.required' => 'La data è obbligatoria.',
+
 
         ])->validate();
         return $validator;

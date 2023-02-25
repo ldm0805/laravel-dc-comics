@@ -15,4 +15,5 @@
         </a>
     </div>
 </div>
+@include ('partials.icon-cont')
 @endsection

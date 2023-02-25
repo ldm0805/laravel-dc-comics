@@ -53,7 +53,7 @@
                 </div>
                 <div class="form-group mb-3">
                     <label class="control-label">Data di uscita</label>
-                    <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la data di uscita">
+                    <input type="date" class="form-control datepicker" name="sale_date" placeholder="Inserisci la data di uscita">
                 </div>
                 <div class="form-group mb-3">
                     <div class="col-but">

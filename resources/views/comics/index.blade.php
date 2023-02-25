@@ -14,5 +14,6 @@
         </div>
     </section>
 </div>
+@include ('partials.icon-cont')
 @include ('comics.modal_delete_comic')
 @endsection

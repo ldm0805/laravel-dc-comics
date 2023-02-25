@@ -55,7 +55,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label class="control-label">Data di uscita</label>
-                        <input type="date" class="form-control" name="sale_date" placeholder="Inserisci la Data di uscita" value="{{old('sale_date') ?? $single->sale_date}}">
+                        <input type="date" class="form-control datepicker" name="sale_date" placeholder="Inserisci la Data di uscita" value="{{old('sale_date') ?? $single->sale_date}}">
                     </div>
                     <div class="form-group mb-3">
                         <div class="col-but">

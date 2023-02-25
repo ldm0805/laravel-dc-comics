@@ -4,29 +4,39 @@ import * as bootstrap from 'bootstrap';
 import.meta.glob([
     '../img/**'
 ])
-//recupero i pulsanti con la classe
+
+//MODAL
+
+//Recupero tutti i pulsanti con la classe.
 const deleteButtons = document.querySelectorAll('.confirm-delete-button[type="submit"]');
 
 deleteButtons.forEach((button) => {
     button.addEventListener('click', function (event) {
-        event.preventDefault(); //evitiamo che venga cancellato subito il record dal database
-        //recupero il nome della pasta dal dataatribbute titolo
+        //Evito che il record sia eliminato subito dal database.
+        event.preventDefault();
+        //Recupero il titolo del comic.
         const comicTitle = button.getAttribute('data-title');
-        //recupero la modale creata attraverso l'id
+        //Recupero la modale creata attraverso l'id.
         const modal = document.getElementById('delete-comic-modal');
-        //creo una nuova modale con i metodi di bootstrap a partire da quella realizzata nel file modal_delete
+        //Creo una nuova modale con i metodi di bootstrap a partire da quella realizzata nel file modal_delete.
         const bootstrapModal = new bootstrap.Modal(modal);
-        //mostro la modale
+        //Mostro la modale.
         bootstrapModal.show();
 
-        //mostrare titolo pastanel segnaposto
+        //Mostro il titolo del comic nella modale.
         const modalContent = modal.querySelector('#modal-item-title');
         modalContent.textContent = comicTitle;
-        //recupero il pulsante di cancellazione del record
+        //Recupero il pulsante di cancellazione del record;
         const deleteButton = modal.querySelector('#confirm-delete');
-        //metto in ascolto il pulsante per intercettare il click
+        //Metto in ascolto il pulsante per intercettare il click;
         deleteButton.addEventListener('click', () => {
             button.parentElement.submit();
         })
     })
+})
+
+//Comics Input create ed edit.
+//Formattazione in create ed edit.
+$('.datepicker').datepicker({
+    format: 'Y-m-d'
 })
