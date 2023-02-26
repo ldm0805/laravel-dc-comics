@@ -34,10 +34,3 @@ deleteButtons.forEach((button) => {
         })
     })
 })
-
-//Comics Input create ed edit.
-//Formattazione in create ed edit.
-//Prendo tutti gli elementi con la classe datapicker, e cambio il formato della data in Y-m-d;
-$('.datepicker').datepicker({
-    format: 'Y-m-d'
-})
