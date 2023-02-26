@@ -23,14 +23,14 @@
                     <button class="footer-button confirm-delete-button">Modifica</button>
                 </div>
             </a>
+            <div class="col-but">
             <form class="d-inline-block" method="POST" action="{{route('comics.destroy', ['comic' => $albumcover->id])}}">
                 @csrf
                 @method('DELETE')
                 {{-- data-cicclo --}}
-                <div class="col-but">
                     <button type="submit" class="footer-button confirm-delete-button">Elimina</button>
-                </div>
-            </form>
+                </form>
+            </div>
         </div>
     </div>
     <div>
