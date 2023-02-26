@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 //Richiamo ComicController
 use App\Http\Controllers\ComicController as ComicController;
+//Richiamo PagesController
 use App\Http\Controllers\PagesController as PagesController;
 
 
@@ -18,7 +19,8 @@ use App\Http\Controllers\PagesController as PagesController;
 |
 */
 
+//Recupero la route della homepage
 Route::get('/', [PagesController::class, 'index'])->name('homepage');
 
-//Recupera la route in automatico
+//Recupero in automatico tutte le rotte nella cartella comics.
 Route::resource('comics', ComicController::class);

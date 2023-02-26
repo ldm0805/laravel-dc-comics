@@ -56,6 +56,9 @@
                     <div class="form-group mb-3">
                         <label class="control-label">Data di uscita</label>
                         <input type="date" class="form-control datepicker" name="sale_date" placeholder="Inserisci la Data di uscita" value="{{old('sale_date') ?? $single->sale_date}}">
+                        @error('sale_date')
+                            <div class="text-danger">{{$message}}</div>
+                        @enderror
                     </div>
                     <div class="form-group mb-3">
                         <div class="col-but">

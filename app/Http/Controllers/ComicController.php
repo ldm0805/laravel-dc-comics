@@ -6,20 +6,23 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use App\Models\Comic;
 
+
 class ComicController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
+     * Visualizzare tutto il contenuto di una determinata tabella.
+     * Pagina dove mostro tutti i comic.
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
+            //Recupero tutti i record della tabella con metodo ::all().
             $products = Comic::all();
-            $productsmenu = config('comics.menu');
             $productsicon = config('comics.icon');
             $productsocial = config('comics.social');
-            return view('comics.index', compact('products','productsmenu','productsicon','productsocial'));
+            //Ritorno della views index contenuta nella cartella comics e compact degli elementi che sono nell'array.
+            return view('comics.index', compact('products','productsicon','productsocial'));
     }
 
     /**
@@ -30,10 +33,9 @@ class ComicController extends Controller
     public function create()
     {
         {
-            $productsmenu = config('comics.menu');
             $productsicon = config('comics.icon');
             $productsocial = config('comics.social');
-            return view('comics.create', compact('productsmenu','productsicon','productsocial'));
+            return view('comics.create', compact('productsicon','productsocial'));
         }
     }
 
@@ -69,10 +71,9 @@ class ComicController extends Controller
                 'single'=> $comic
             ];
         }
-        $productsmenu = config('comics.menu');
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        return view('comics.show',$single, compact('productsmenu','productsicon','productsocial'));
+        return view('comics.show',$single, compact('productsicon','productsocial'));
     }
 
     /**
@@ -89,10 +90,9 @@ class ComicController extends Controller
                 'single'=> $comic
             ];
         }
-        $productsmenu = config('comics.menu');
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        return view('comics.edit',$single, compact('productsmenu','productsicon','productsocial'));
+        return view('comics.edit',$single, compact('productsicon','productsocial'));
     }
 
     /**
@@ -131,7 +131,7 @@ class ComicController extends Controller
             'thumb' => 'required',
             'price' => 'required',
             'series' => 'required',
-            'sale_date' => 'required',
+            'sale_date' => 'required|max:10',
 
 
         ],
@@ -143,6 +143,9 @@ class ComicController extends Controller
             'price.required' => 'Il prezzo è obbligatorio.',
             'series.required' => 'La serie è obbligatoria.',
             'sale_date.required' => 'La data è obbligatoria.',
+            'sale_date.max' => 'La data non può superare :max caratteri.',
+
+            
 
 
         ])->validate();
