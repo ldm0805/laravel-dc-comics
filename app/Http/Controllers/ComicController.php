@@ -77,16 +77,10 @@ class ComicController extends Controller
     public function show($id)
     {
         //Metodo findOrFail, se non trova il comic restituisce in automatico l'errore 404.
-        $comic = Comic::findOrFail($id);
-        //Se il comic è stato creato,creo un array con la chiave 'single' che contiene il comic recuperato.
-        if($comic){
-            $single=[
-                'single'=> $comic
-            ];
-        }
+        $single = Comic::findOrFail($id);
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        return view('comics.show',$single, compact('productsicon','productsocial'));
+        return view('comics.show', compact('single','productsicon','productsocial'));
     }
 
     /**
@@ -99,16 +93,10 @@ class ComicController extends Controller
        {
 
         //Metodo findOrFail, se non trova il comic restituisce in automatico l'errore 404.
-        $comic = Comic::findOrFail($id);
-        //Se il comic è stato creato,creo un array con la chiave 'single' che contiene il comic recuperato.
-        if($comic){
-            $single=[
-                'single'=> $comic
-            ];
-        }
+        $single = Comic::findOrFail($id);
         $productsicon = config('comics.icon');
         $productsocial = config('comics.social');
-        return view('comics.edit',$single, compact('productsicon','productsocial'));
+        return view('comics.edit', compact('single','productsicon','productsocial'));
     }
 
     /**

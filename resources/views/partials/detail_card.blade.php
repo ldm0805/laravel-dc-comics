@@ -27,7 +27,6 @@
             <form class="d-inline-block" method="POST" action="{{route('comics.destroy', ['comic' => $albumcover->id])}}">
                 @csrf
                 @method('DELETE')
-                {{-- data-cicclo --}}
                     <button type="submit" class="footer-button confirm-delete-button">Elimina</button>
                 </form>
             </div>

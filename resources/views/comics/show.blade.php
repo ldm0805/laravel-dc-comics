@@ -8,7 +8,15 @@
 <div class="single-card">
     <div class="position">
         <div class="view">
-            <img class="thumb" src="{{$single['thumb']}}" alt="{{$single['title']}}">
+            @if(@getimagesize($single->thumb))
+            <div class="album-image">
+                <img class="thumb" src="{{$single->thumb}}" alt="{{$single->title}}">
+            </div>
+        @else 
+            <div class="album-image">
+                <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="">
+            </div>
+        @endif
             <div>View Gallery</div>
             <div class="comic">{{$single['type']}}</div>
         </div>
