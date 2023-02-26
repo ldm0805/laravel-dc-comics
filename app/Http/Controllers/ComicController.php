@@ -33,8 +33,10 @@ class ComicController extends Controller
     public function create()
     {
         {
+            //Recupero i dati per la configurazione
             $productsicon = config('comics.icon');
             $productsocial = config('comics.social');
+            //Passo i dati
             return view('comics.create', compact('productsicon','productsocial'));
         }
     }
@@ -76,6 +78,7 @@ class ComicController extends Controller
     {
         //Metodo findOrFail, se non trova il comic restituisce in automatico l'errore 404.
         $comic = Comic::findOrFail($id);
+        //Se il comic è stato creato,creo un array con la chiave 'single' che contiene il comic recuperato.
         if($comic){
             $single=[
                 'single'=> $comic
@@ -94,7 +97,10 @@ class ComicController extends Controller
      */
     public function edit($id)
        {
-        $comic = Comic::find($id);
+
+        //Metodo findOrFail, se non trova il comic restituisce in automatico l'errore 404.
+        $comic = Comic::findOrFail($id);
+        //Se il comic è stato creato,creo un array con la chiave 'single' che contiene il comic recuperato.
         if($comic){
             $single=[
                 'single'=> $comic
@@ -107,34 +113,42 @@ class ComicController extends Controller
 
     /**
      * Update the specified resource in storage.
-     *
+     *  
      * @param  \Illuminate\Http\Request  $request
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function update(Request $request, $id)
     {
+
+       //Metodo findOrFail, se non trova il comic restituisce in automatico l'errore 404.
         $newComic = Comic::findOrFail($id);
 
+        //Valido i dati recuperati nella form con il metodo validation.
         $form_data = $this->validation($request->all());
 
+        //Aggiorno i dati del comic con i nuovi.
         $newComic->update($form_data);
 
+        //Reindirizzo alla pagina di visualizzazione del comic.
         return redirect()->route('comics.show',['comic' => $newComic->id]);
     }
 
     /**
      * Remove the specified resource from storage.
-     *
+     * Eliminazione del comic
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
     public function destroy($id)
     {
+       //Metodo findOrFail, se non trova il comic restituisce in automatico l'errore 404.
         $comic = Comic::findOrFail($id);
-        
+
+        //Elimino il comic dal database.
         $comic->delete();
 
+        //Reindirizzamento alla pagina dei comics.
         return redirect()->route('comics.index');
     }
 
