@@ -22,5 +22,5 @@ use App\Http\Controllers\PagesController as PagesController;
 //Recupero la route della homepage
 Route::get('/', [PagesController::class, 'index'])->name('homepage');
 
-//Recupero in automatico tutte le rotte nella cartella comics.
+//Recupero in automatico tutte le rotte per Comic Controller.
 Route::resource('comics', ComicController::class);

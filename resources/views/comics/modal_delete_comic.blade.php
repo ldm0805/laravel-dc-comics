@@ -9,7 +9,8 @@
         </div>
         <div class="modal-body">
           <!-- span segnaposto -->
-         Sei sicuro di voler cancellare l'elemento selezionato? <span id="modal-item-title"></span> 
+         Sei sicuro di voler cancellare l'elemento selezionato? 
+         <p id="modal-item-title" class="text-danger"></p> 
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Chiudi</button>

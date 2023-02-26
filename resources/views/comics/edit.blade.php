@@ -51,7 +51,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label class="control-label">Tipo</label>
-                        <input class="form-control" name="type" placeholder="Inserisci la Tipo" value="{{old('type') ?? $single->type}}">
+                        <input class="form-control" name="type" placeholder="Inserisci la tipologia" value="{{old('type') ?? $single->type}}">
                     </div>
                     <div class="form-group mb-3">
                         <label class="control-label">Data di uscita</label>
