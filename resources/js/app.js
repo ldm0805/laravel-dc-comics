@@ -5,7 +5,7 @@ import.meta.glob([
     '../img/**'
 ])
 
-//MODAL
+//MODAL JS
 
 //Recupero tutti i pulsanti con la classe.
 const deleteButtons = document.querySelectorAll('.confirm-delete-button[type="submit"]');

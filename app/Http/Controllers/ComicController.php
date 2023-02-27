@@ -136,6 +136,9 @@ class ComicController extends Controller
         //Elimino il comic dal database.
         $comic->delete();
 
+        //Messaggio di conferma eliminazione del comic
+        session()->flash('message', 'Comic eliminato correttamente.');
+
         //Reindirizzamento alla pagina dei comics.
         return redirect()->route('comics.index');
     }

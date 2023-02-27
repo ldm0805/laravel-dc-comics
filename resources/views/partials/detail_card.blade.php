@@ -1,4 +1,5 @@
 {{-- Stampa card fumetti --}}
+
 <div class="album-card ">
     <div class="card-cont">
         <a class="link-single" href="{{ route('comics.show', ['comic' => $comic['id']]) }}">
