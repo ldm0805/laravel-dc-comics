@@ -37,7 +37,7 @@
                     </div>
                     <div class="form-group mb-3">
                         <label class="control-label">Prezzo</label>
-                        <input class="form-control" name="price" placeholder="Inserisci il prezzo" value="{{old('price') ?? $single->price}}">
+                        <input type="number" step="0.01" class="form-control" name="price" placeholder="Inserisci il prezzo" value="{{old('price') ?? $single->price}}">
                         @error('price')
                             <div class="text-danger">{{$message}}</div>
                         @enderror

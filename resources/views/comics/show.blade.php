@@ -9,14 +9,14 @@
     <div class="position">
         <div class="view">
             @if(@getimagesize($single->thumb))
-            <div class="album-image">
-                <img class="thumb" src="{{$single->thumb}}" alt="{{$single->title}}">
-            </div>
-        @else 
-            <div class="album-image">
-                <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="">
-            </div>
-        @endif
+                <div class="album-image">
+                    <img class="thumb" src="{{$single->thumb}}" alt="{{$single->title}}">
+                </div>
+            @else 
+                <div class="album-image">
+                    <img src="https://static.vecteezy.com/system/resources/previews/005/337/799/original/icon-image-not-found-free-vector.jpg" alt="">
+                </div>
+            @endif
             <div>View Gallery</div>
             <div class="comic">{{$single['type']}}</div>
         </div>
@@ -27,12 +27,6 @@
         <div class="title-desc">
             <div class="d-flex gap-3 align-items-center mb-4">
                 <h4 class="upbold">{{$single['title']}}</h4>
-
-                {{-- <a href="{{route('comics.edit', ['comic' => $single->id])}}">
-                    <button class="confirm-delete-button btn btn-sm btn-square btn-warning">
-                        <i class="fa-regular fa-pen-to-square text-white"></i>
-                    </button>
-                </a> --}}
                 <a href="{{route('comics.edit', ['comic' => $single->id])}}">
                     <div class="col-but">
                         <button class="footer-button confirm-delete-button">Modifica</button>
@@ -41,7 +35,7 @@
             </div>
             <div class="green-cont">
                 <div class="avaible col-7">
-                    <span class="upbold">U.S. Price: <span class="text-white">{{$single['price']}}</span></span>
+                    <span class="upbold">U.S. Price: <span class="text-white">{{$single['price']}} 	&#8364;</span></span>
                     <span class="upbold">Avaiable</span>
                 </div>
                 <div class="check-avaible col-3">
