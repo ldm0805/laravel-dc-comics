@@ -149,7 +149,7 @@ class ComicController extends Controller
             'thumb' => 'required',
             'price' => 'required',
             'series' => 'required',
-            'sale_date' => 'date_format:Y-m-d',
+            'sale_date' => 'nullable|date_format:Y-m-d',
         ],
         [
             'title.required' => 'Il titolo è obbligatorio.',
