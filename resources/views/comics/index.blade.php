@@ -3,7 +3,7 @@
 <div class="container-fluid bg_gray">
     <section>
         <div class="album">
-            @foreach($products as $albumcover)
+            @foreach($products as $comic)
                     @include('/partials/detail_card')
             @endforeach
         </div>

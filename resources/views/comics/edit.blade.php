@@ -11,7 +11,7 @@
                 </div>
             </div>
             <div>
-                <form action="{{route('comics.update', ['comic' => $single->id])}}" method="POST">
+                <form action="{{route('comics.update', $single->id)}}" method="POST">
                     @csrf
                     @method('PUT') 
                     <div class="form-group mb-3">
