@@ -25,12 +25,18 @@
     {{-- Descrizione del fumetto con prezzo e disponibilità --}}
     <div class="d-flex justify-content-between">
         <div class="title-desc">
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-3 align-items-center mb-4">
                 <h4 class="upbold">{{$single['title']}}</h4>
-                <a href="{{route('comics.edit', ['comic' => $single->id])}}">
+
+                {{-- <a href="{{route('comics.edit', ['comic' => $single->id])}}">
                     <button class="confirm-delete-button btn btn-sm btn-square btn-warning">
                         <i class="fa-regular fa-pen-to-square text-white"></i>
                     </button>
+                </a> --}}
+                <a href="{{route('comics.edit', ['comic' => $single->id])}}">
+                    <div class="col-but">
+                        <button class="footer-button confirm-delete-button">Modifica</button>
+                    </div>
                 </a>
             </div>
             <div class="green-cont">
@@ -61,6 +67,7 @@
             <h2>Talent</h2>
             <p>Art by: <a href="#"> Non disponibile</a></p>
             <p>Written by: <a href="#"> Non disponibile</a></p>
+            
         </div>
         <div class="specs col-4">
             <h2>Specs</h2>
